@@ -3,130 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YnotHost - Hospedagem Profissional</title>
-  <!-- Fonte Moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Poppins', sans-serif; background:#f8f9fa; color:#333; }
-    header { background:#111; color:#fff; padding:20px; text-align:center; }
-    header h1 { font-size:2rem; font-weight:700; display:flex; justify-content:center; align-items:center; gap:10px; }
-    header h1 i { color:#ff4081; }
-    nav { margin-top:10px; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:500; }
-    nav a:hover { color:#ff4081; }
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Hospedagem rápida, suporte dedicado e sites profissionais para qualquer negócio. Conheça nossos planos a partir de R$ 25,69/mês.">
+  <meta name="keywords" content="hospedagem de sites, criar site, site profissional, YnotHost, hospedagem barata, hospedagem web">
+  <meta name="author" content="YnotHost">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ynothost.com.br/">
+  <meta property="og:title" content="YnotHost - Hospedagem de Sites Profissionais">
+  <meta property="og:description" content="Hospedagem rápida, suporte dedicado e sites profissionais para qualquer negócio.">
+  <meta property="og:image" content="https://ynothost.com.br/assets/og-image.jpg">
 
-    /* Hero */
-    .hero { background:#ff4081; color:#fff; text-align:center; padding:80px 20px; }
-    .hero h2 { font-size:2.5rem; margin-bottom:15px; }
-    .hero p { font-size:1.2rem; margin-bottom:25px; }
-    .btn { display:inline-block; padding:12px 25px; background:#fff; color:#ff4081; border-radius:30px; font-weight:600; text-decoration:none; transition:0.3s; }
-    .btn:hover { background:#f1f1f1; }
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ynothost.com.br/">
+  <meta property="twitter:title" content="YnotHost - Hospedagem de Sites Profissionais">
+  <meta property="twitter:description" content="Hospedagem rápida, suporte dedicado e sites profissionais para qualquer negócio.">
+  <meta property="twitter:image" content="https://ynothost.com.br/assets/og-image.jpg">
 
-    /* Seções */
-    section { padding:60px 20px; text-align:center; }
-    section h2 { font-size:2rem; margin-bottom:30px; font-weight:700; }
+  <title>YnotHost - Hospedagem de Sites Profissionais</title>
 
-    /* Planos */
-    .plans { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; }
-    .plan { background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
-    .plan:hover { transform:translateY(-5px); }
-    .plan i { font-size:2rem; color:#ff4081; margin-bottom:15px; }
-    .plan h3 { color:#ff4081; margin-bottom:10px; font-size:1.3rem; }
-    .plan p { font-size:1rem; margin-bottom:15px; }
-    .plan .price { font-size:1.6rem; font-weight:700; margin-bottom:20px; }
-    .plan .btn { background:#ff4081; color:#fff; }
-    .plan .btn:hover { background:#e73370; }
-
-    /* Modelos */
-    .models { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:20px; }
-    .model { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:0.3s; }
-    .model:hover { transform:scale(1.03); }
-    .model img { width:100%; border-radius:10px; margin-bottom:10px; }
-    .model h3 { color:#ff4081; margin-bottom:5px; }
-
-    /* Footer */
-    footer { background:#111; color:#ccc; padding:25px; text-align:center; margin-top:40px; font-size:0.9rem; }
-    footer p { margin:5px 0; }
-
-    /* Botão WhatsApp Flutuante */
-    .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; font-size:2rem; padding:15px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition:0.3s; }
-    .whatsapp:hover { background:#1ebe5b; }
-  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (Ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Arquivo de CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><i class="fa-solid fa-rocket"></i> YnotHost</h1>
-    <nav>
-      <a href="#planos">Planos</a>
-      <a href="#modelos">Modelos</a>
-      <a href="#contato">Contato</a>
-    </nav>
+  <!-- Skip to main content para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header role="banner">
+    <div class="container">
+      <h1><i class="fa-solid fa-rocket" aria-hidden="true"></i> YnotHost</h1>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#modelos">Modelos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Seu site online em minutos!</h2>
-    <p>Hospedagem rápida, suporte dedicado e sites profissionais para qualquer negócio.</p>
-    <a href="https://wa.me/5512978135300" class="btn"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
-  </section>
+  <main id="main-content" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h2 id="hero-title">Seu site online em minutos!</h2>
+        <p>Hospedagem rápida, suporte dedicado e sites profissionais para qualquer negócio.</p>
+        <a href="https://wa.me/5512978135300" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Fale no WhatsApp
+        </a>
+      </div>
+    </section>
 
-  <section id="planos">
-    <h2>Nossos Planos</h2>
-    <div class="plans">
-      <div class="plan">
-        <i class="fa-solid fa-laptop-code"></i>
-        <h3>Básico</h3>
-        <p>Até 5 páginas + e-mail profissional + SSL</p>
-        <div class="price">R$ 25,69/mês</div>
-        <a href="https://wa.me/5512978135300" class="btn">Contratar</a>
+    <section id="planos" aria-labelledby="planos-title">
+      <div class="container">
+        <h2 id="planos-title">Nossos Planos</h2>
+        <div class="plans">
+          <article class="plan" role="article">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <h3>Básico</h3>
+            <p>Até 5 páginas + e-mail profissional + SSL</p>
+            <div class="price" aria-label="Preço: R$ 25,69 por mês">R$ 25,69<span>/mês</span></div>
+            <a href="https://wa.me/5512978135300" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Contratar plano Básico">Contratar</a>
+          </article>
+          
+          <article class="plan plan-popular" role="article">
+            <div class="popular-badge" aria-label="Plano mais vendido">Mais Vendido</div>
+            <i class="fa-solid fa-fire" aria-hidden="true"></i>
+            <h3>🔥 Pro</h3>
+            <p>Até 10 páginas + SEO básico + suporte</p>
+            <div class="price" aria-label="Preço: R$ 35,00 por mês">R$ 35,00<span>/mês</span></div>
+            <a href="https://wa.me/5512978135300" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Contratar plano Pro">Contratar</a>
+          </article>
+          
+          <article class="plan" role="article">
+            <i class="fa-solid fa-store" aria-hidden="true"></i>
+            <h3>Premium</h3>
+            <p>Loja virtual + marketing + suporte avançado</p>
+            <div class="price" aria-label="Preço: R$ 60,00 por mês">R$ 60,00<span>/mês</span></div>
+            <a href="https://wa.me/5512978135300" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Contratar plano Premium">Contratar</a>
+          </article>
+        </div>
       </div>
-      <div class="plan" style="border:2px solid #ff4081;">
-        <i class="fa-solid fa-fire"></i>
-        <h3>🔥 Pro (Mais Vendido)</h3>
-        <p>Até 10 páginas + SEO básico + suporte</p>
-        <div class="price">R$ 35,00/mês</div>
-        <a href="https://wa.me/5512978135300" class="btn">Contratar</a>
+    </section>
+
+    <section id="modelos" aria-labelledby="modelos-title">
+      <div class="container">
+        <h2 id="modelos-title">Modelos de Sites</h2>
+        <p>Escolha um modelo e personalizamos para sua empresa:</p>
+        <div class="models">
+          <article class="model" role="article">
+            <img src="https://source.unsplash.com/400x250/?bakery" alt="Exemplo de site para padaria com design moderno" loading="lazy">
+            <div class="model-content">
+              <h3>Padaria</h3>
+              <p>Design moderno para padarias e lanchonetes.</p>
+            </div>
+          </article>
+          
+          <article class="model" role="article">
+            <img src="https://source.unsplash.com/400x250/?clinic" alt="Exemplo de site para clínica com layout profissional" loading="lazy">
+            <div class="model-content">
+              <h3>Clínica</h3>
+              <p>Site profissional para clínicas e consultórios.</p>
+            </div>
+          </article>
+          
+          <article class="model" role="article">
+            <img src="https://source.unsplash.com/400x250/?shop" alt="Exemplo de loja virtual com sistema de vendas online" loading="lazy">
+            <div class="model-content">
+              <h3>Loja Virtual</h3>
+              <p>Pronto para vender online.</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="plan">
-        <i class="fa-solid fa-store"></i>
-        <h3>Premium</h3>
-        <p>Loja virtual + marketing + suporte avançado</p>
-        <div class="price">R$ 60,00/mês</div>
-        <a href="https://wa.me/5512978135300" class="btn">Contratar</a>
+    </section>
+  </main>
+
+  <footer id="contato" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="contact-info">
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+5512978135300">(12) 97813-5300</a></p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:contato@ynothost.com.br">contato@ynothost.com.br</a></p>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 YnotHost - Todos os direitos reservados.</p>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section id="modelos">
-    <h2>Modelos de Sites</h2>
-    <p>Escolha um modelo e personalizamos para sua empresa:</p>
-    <div class="models">
-      <div class="model">
-        <img src="https://source.unsplash.com/400x250/?bakery" alt="Padaria">
-        <h3>Padaria</h3>
-        <p>Design moderno para padarias e lanchonetes.</p>
-      </div>
-      <div class="model">
-        <img src="https://source.unsplash.com/400x250/?clinic" alt="Clínica">
-        <h3>Clínica</h3>
-        <p>Site profissional para clínicas e consultórios.</p>
-      </div>
-      <div class="model">
-        <img src="https://source.unsplash.com/400x250/?shop" alt="Loja Virtual">
-        <h3>Loja Virtual</h3>
-        <p>Pronto para vender online.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer id="contato">
-    <p>📞 (12) 97813-5300 | ✉ contato@ynothost.com.br</p>
-    <p>© 2025 YnotHost - Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão WhatsApp -->
-  <a href="https://wa.me/5512978135300" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <!-- Botão WhatsApp Flutuante -->
+  <a href="https://wa.me/5512978135300" class="whatsapp-float" aria-label="Fale conosco no WhatsApp" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
