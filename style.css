@@ -11,11 +11,13 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #2c3e50;
+  line-height: 1.7;
   overflow-x: hidden;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 /* Skip Link para Acessibilidade */
@@ -112,17 +114,19 @@ nav a:focus {
   outline: none;
 }
 
-/* Seção Hero */
+/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #ff4081 0%, #e73370 100%);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%), 
+              url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80') center/cover;
+  padding: 140px 0;
   color: #fff;
   text-align: center;
-  padding: 100px 0;
   position: relative;
   overflow: hidden;
-}
-
-.hero::before {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}.hero::before {
   content: '';
   position: absolute;
   top: 0;
@@ -139,19 +143,26 @@ nav a:focus {
 }
 
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 24px;
+  font-weight: 800;
   animation: fadeInUp 1s ease-out 0.3s both;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  max-width: 600px;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   animation: fadeInUp 1s ease-out 0.6s both;
+  font-weight: 300;
+  opacity: 0.95;
+  line-height: 1.6;
 }
 
 /* Botões */
@@ -213,12 +224,14 @@ section {
 }
 
 section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
   font-weight: 700;
   text-align: center;
-  color: #333;
+  color: #2c3e50;
   position: relative;
+  letter-spacing: -0.01em;
 }
 
 section h2::after {
@@ -236,25 +249,43 @@ section h2::after {
 /* Planos */
 .plans {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
 }
 
 .plan {
   background: #fff;
-  padding: 40px 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  position: relative;
+  padding: 50px 35px;
   text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  border: 3px solid transparent;
+  overflow: hidden;
+}
+
+.plan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .plan:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.plan:hover::before {
+  transform: scaleX(1);
 }
 
 .plan-popular {
@@ -271,23 +302,34 @@ section h2::after {
   right: -2px;
   bottom: -2px;
   background: linear-gradient(45deg, #ff4081, #e73370, #ff4081);
-  border-radius: 22px;
-  z-index: -1;
-  animation: gradientShift 3s ease infinite;
+  borde.plan-popular {
+  border-color: #ff4081;
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #fff 0%, #fef7f7 100%);
+  box-shadow: 0 20px 60px rgba(255, 64, 129, 0.25);
 }
 
-.popular-badge {
+.plan-popular::before {
+  background: linear-gradient(90deg, #ff4081, #e73370);
+  height: 6px;
+  transform: scaleX(1);
+}
+
+.plan-popular::after {
+  content: '🔥 Mais Vendido';
   position: absolute;
-  top: -15px;
+  top: -2px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(45deg, #ff4081, #e73370);
+  background: linear-gradient(135deg, #ff4081, #e73370);
   color: #fff;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+  padding: 12px 25px;
+  border-radius: 0 0 15px 15px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+  letter-spacing: 0.5px;
+}  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
 }
 
 .plan i {
@@ -440,31 +482,44 @@ footer {
 }
 
 .copyright {
-  font-size: 0.9rem;
-}
-
-/* Botão WhatsApp Flutuante */
-.whatsapp-float {
+  font-size: 0.9rem/* Botão WhatsApp Flutuante */
+.whatsapp {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: linear-gradient(45deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, #25D366, #128C7E);
   color: #fff;
   font-size: 1.8rem;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 1000;
-  animation: bounce 2s infinite;
+  text-decoration: none;
+  animation: pulse 2s infinite;
 }
 
-.whatsapp-float:hover {
-  background: linear-gradient(45deg, #128C7E, #25D366);
+.whatsapp:hover {
+  background: linear-gradient(135deg, #128C7E, #25D366);
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+}45deg, #128C7E, #25D366);
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
@@ -517,31 +572,34 @@ footer {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
   html {
     font-size: 14px;
   }
 
-  header .container {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
     flex-direction: column;
-    gap: 15px;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 30px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 
   header h1 {
@@ -553,15 +611,19 @@ footer {
   }
 
   .hero {
-    padding: 60px 0;
+    padding: 100px 0;
+    min-height: 70vh;
   }
 
   .hero h2 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    padding: 0 10px;
   }
 
   section {
@@ -569,21 +631,28 @@ footer {
   }
 
   section h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
   }
 
   .plans {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .plan {
+    padding: 40px 25px;
+    margin: 0 10px;
   }
 
   .plan-popular {
-    transform: none;
+    transform: scale(1.02);
   }
 
   .models {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
   }
 
   .footer-content {
@@ -596,7 +665,7 @@ footer {
     gap: 15px;
   }
 
-  .whatsapp-float {
+  .whatsapp {
     bottom: 20px;
     right: 20px;
     width: 55px;
@@ -604,23 +673,35 @@ footer {
     font-size: 1.6rem;
   }
 }
-
 @media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+
   .container {
     padding: 0 15px;
   }
 
+  .hero {
+    padding: 80px 0;
+  }
+
   .hero h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .btn {
     padding: 12px 25px;
     font-size: 0.9rem;
+  }
+
+  section {
+    padding: 50px 0;
   }
 
   section h2 {
@@ -633,6 +714,12 @@ footer {
 
   .plan .price {
     font-size: 1.8rem;
+  }
+
+  .whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
   }
 }
 
