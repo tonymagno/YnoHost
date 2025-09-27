@@ -465,3 +465,25 @@ window.addEventListener('scroll', throttle(function() {
 window.addEventListener('resize', debounce(function() {
     // Código para redimensionamento
 }, 250));
+
+
+    // ===== MENU HAMBURGUER =====
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-menu ul");
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        // Fechar o menu ao clicar em um item (apenas em mobile)
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove("active");
+                }
+            });
+        });
+    }
+
+

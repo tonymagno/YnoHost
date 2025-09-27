@@ -1283,3 +1283,66 @@ footer {
   }
 }
 
+
+
+/* Menu Hamburguer */
+.nav-toggle {
+  display: none; /* Escondido por padrão em desktop */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Reduzir ainda mais o logo em mobile */
+    gap: 5px;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem; /* Reduzir o foguete em mobile */
+  }
+
+  .logo-tagline {
+    display: none; /* Esconder o tagline em mobile */
+  }
+
+  nav ul {
+    display: none; /* Esconder o menu de navegação padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Altura do cabeçalho */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex; /* Mostrar menu quando ativo */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul a {
+    font-size: 1.2rem;
+  }
+
+  .nav-toggle {
+    display: block; /* Mostrar o botão de hambúrguer */
+  }
+}
+
+
