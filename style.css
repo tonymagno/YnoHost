@@ -66,16 +66,17 @@ header .container {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.4rem; /* Reduzido */
   font-weight: 700;
   text-decoration: none;
 }
 
 .logo-icon {
-  font-size: 2.2rem;
-  animation: bounce 2s infinite;
+  font-size: 1.8rem; /* Reduzido */
+  animation: none; /* Removida animação para ser mais discreto */
+  color: #bdc3c7; /* Cor mais neutra */
 }
 
 .logo-text {
@@ -87,38 +88,38 @@ header .container {
 .logo-main {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  color: #667eea;
-  font-size: 1.8rem;
+  color: #fff; /* Cor branca para ser mais discreto */
+  font-size: 1.4rem; /* Reduzido */
 }
 
 .logo-accent {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  color: #ff4081;
-  font-size: 1.8rem;
+  color: #bdc3c7; /* Cor mais neutra */
+  font-size: 1.4rem; /* Reduzido */
 }
 
 .logo-tagline {
-  font-size: 0.7rem;
-  color: #bdc3c7;
+  font-size: 0.6rem; /* Reduzido */
+  color: #999;
   font-weight: 400;
   margin-top: 2px;
   font-family: 'Inter', sans-serif;
 }
 
 header h1 {
-  color: #ff4081;
-  font-size: 2rem;
+  color: #fff; /* Cor branca */
+  font-size: 1.6rem; /* Reduzido */
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 10px;
-  animation: fadeInLeft 1s ease-out;
+  gap: 8px;
+  animation: none; /* Removida animação */
 }
 
 header h1 i {
-  color: #ff4081;
-  animation: pulse 2s infinite;
+  color: #bdc3c7; /* Cor mais neutra */
+  animation: none; /* Removida animação */
 }
 
 nav ul {
