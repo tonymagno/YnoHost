@@ -41,6 +41,10 @@ Não é necessário nenhum servidor ou passo de compilação para visualizar est
         |-- index.html            # Site modelo para loja virtual
         |-- style.css             # Estilos específicos da loja
         |-- script.js             # JavaScript da loja
+    |-- contabilidade/
+        |-- index.html            # Site modelo para contabilidade
+        |-- style.css             # Estilos específicos da contabilidade
+        |-- script.js             # JavaScript da contabilidade
 ```
 
 ## 🛠️ Tecnologias Utilizadas
@@ -49,7 +53,7 @@ Não é necessário nenhum servidor ou passo de compilação para visualizar est
 - **CSS3:** Para estilização, layout (Grid e Flexbox) e animações.
 - **JavaScript (ES6+):** Para interatividade do lado do cliente.
 - **Font Awesome:** Para os ícones.
-- **Google Fonts:** Para a tipografia (família Poppins).
+- **Google Fonts:** Para a tipografia (família Poppins, Inter, Montserrat).
 
 ## 🎨 Modelos de Sites Incluídos
 
@@ -67,6 +71,11 @@ Não é necessário nenhum servidor ou passo de compilação para visualizar est
 - **Design:** Cores vibrantes (laranja e roxo) para um e-commerce moderno
 - **Funcionalidades:** Carrinho de compras, sistema de favoritos, countdown de ofertas, newsletter
 - **Tipografia:** Oswald + Roboto para impacto visual e legibilidade
+
+### 4. Contabilidade Empresarial Moderna
+- **Design:** Cores sóbrias e profissionais (azul, cinza) para transmitir confiança e seriedade.
+- **Funcionalidades:** Apresentação de serviços (abertura de empresa, IR, folha de pagamento), seção "Sobre Nós", diferenciais, depoimentos e formulário de contato.
+- **Tipografia:** Montserrat + Inter para um visual moderno, clean e legível.
 
 Cada modelo possui:
 - ✅ Design responsivo completo

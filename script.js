@@ -152,19 +152,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== BOTÃO VOLTAR AO TOPO =====
     function createBackToTop() {
-        const backToTopp = document.querySelector(".back-to-top");
+        const backToTop = document.createElement('button');
+        backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        backToTop.className = 'back-to-top';
+        backToTop.setAttribute('aria-label', 'Voltar ao topo');
+        
+        const style = document.createElement('style');
+        style.textContent = `
+            .back-to-top {
+                position: fixed;
+                bottom: 100px;
+                right: 25px;
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(45deg, #333, #555);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+                font-size: 1.2rem;
+            }
+            
+            .back-to-top.show {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .back-to-top:hover {
+                background: linear-gradient(45deg, #ff4081, #e73370);
+                transform: translateY(-2px);
+            }
+        `;
+        
+        document.head.appendChild(style);
+        document.body.appendChild(backToTop);
         
         // Mostrar/esconder baseado no scroll
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
-                backToTopp.classList.add('show');
+                backToTop.classList.add('show');
             } else {
-                backToTopp.classList.remove('show');
+                backToTop.classList.remove('show');
             }
         });
         
         // Funcionalidade de voltar ao topo
-        backToTopp.addEventListener('click', () => {
+        backToTop.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -428,39 +465,3 @@ window.addEventListener('scroll', throttle(function() {
 window.addEventListener('resize', debounce(function() {
     // Código para redimensionamento
 }, 250));
-
-
-    // ===== MENU HAMBURGUER =====
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-menu ul");
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-
-        // Fechar o menu ao clicar em um item (apenas em mobile)
-        navMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                if (window.innerWidth <= 768) {
-                    navMenu.classList.remove("active");
-                }
-            });
-        });
-    }
-
-
-
-
-    // ===== CABEÇALHO FIXO E ENCOLHIMENTO =====
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) { // Ajuste este valor conforme necessário
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
-
-
