@@ -77,6 +77,21 @@ Não é necessário nenhum servidor ou passo de compilação para visualizar est
 - **Funcionalidades:** Apresentação de serviços (abertura de empresa, IR, folha de pagamento), seção "Sobre Nós", diferenciais, depoimentos e formulário de contato.
 - **Tipografia:** Montserrat + Inter para um visual moderno, clean e legível.
 
+### 5. Restaurante Sabor Divino
+- **Design:** Elegante e sofisticado, com paleta de cores que realça a culinária e o ambiente.
+- **Funcionalidades:** Cardápio interativo, galeria de pratos, informações de contato, reservas online e depoimentos.
+- **Tipografia:** Combinação de fontes serifadas e sans-serif para um toque gourmet e legibilidade.
+
+### 6. Pousada Mar Azul
+- **Design:** Acolhedor e convidativo, com foco em imagens de paisagens e acomodações.
+- **Funcionalidades:** Galeria de fotos, tipos de acomodação, informações sobre a região, reservas e contato.
+- **Tipografia:** Fontes leves e amigáveis para transmitir conforto e tranquilidade.
+
+### 7. Aventura Ilhabela - Passeios e Turismo
+- **Design:** Dinâmico e vibrante, com cores que remetem à natureza e aventura.
+- **Funcionalidades:** Catálogo de passeios com filtros, detalhes de cada aventura, galeria de fotos e formulário de orçamento.
+- **Tipografia:** Fontes robustas e modernas para expressar energia e emoção.
+
 Cada modelo possui:
 - ✅ Design responsivo completo
 - ✅ Interações JavaScript avançadas
