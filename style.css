@@ -310,8 +310,10 @@ nav a:focus {
   margin-bottom: 2rem;
   opacity: 0.95;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
   animation: fadeInUp 1s ease-out 0.5s both;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero-features {
@@ -351,16 +353,18 @@ nav a:focus {
 }
 
 .feature-content h3 {
-  color: white;
+  color: #000;
   font-size: 1.125rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .feature-content p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #333;
   font-size: 0.875rem;
   margin: 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero-stats {
